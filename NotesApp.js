@@ -87,7 +87,7 @@
 *This function deletes the note at the index note_id of the notes list
 *@param {Integer} note_id
 */
-function deleteNote(note_id) {
+deleteNote(note_id) {
 
 	if(this.notes[note_id]!== undefined) {
 		delete this.notes[note_id];
