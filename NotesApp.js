@@ -4,9 +4,7 @@
 */
 
 class NotesApplication {
- 	
- 	
- 	
+	
  	/**
  	*@param {String} author
  	* @param {String} notes
