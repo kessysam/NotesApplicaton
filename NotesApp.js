@@ -12,7 +12,7 @@
  	*/
  	constructor(author) {
  		this.author = author;
- 		this.notes = [];
+ 		this.noteList = [];
  	}
 
  	/**
@@ -22,13 +22,24 @@
  	*/
  	create(note_content){
  		
- 		this.author = note_content;
+ 		this.noteList = note_content;
  		
  	}
 
- 	listNotes(){
-
  		
- 	}|
- 
+ 	/**
+ 	*This function lists out each of the notes in the notes list 
+ 	*/
+ 	listNotes(){
+ 		
+ 		if(this.notes.length !== null){
+ 			
+ 			console.log("Notes "+notes[note_id]+" by"+" Author "+author);
+ 			
+ 		}else{
+ 			return null;
+ 		}
+ 		
+ 	}
+ 	
  }
