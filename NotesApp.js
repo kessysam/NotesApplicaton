@@ -35,9 +35,9 @@
  	*/
  	listNotes() {
  		
- 		if(this.notes.length !== null) {
+ 		if(this.notes.length !== 0) {
  			if(get(note_id)) {	
- 				console.log("Notes " + get(note_id) + " by" + " Author "+author);
+ 				console.log("Notes " + get(note_id) + " by" + " Author "+this.author);
  			}
  			
  		} else {
@@ -52,13 +52,44 @@
  	* @param note_id
  	*/
  	
- 	get(note_id) {
+ 	getNote(note_id) {
  		
  		if(indexOf(note_id === -1)){
- 			return notes[note_id];
+ 			return this.notes[note_id];
  		}
  		
  		return false;	
  	}
+ 	
+ 	/**
+ 	*This function take a search string, search_text and returns all the notes with that text within it
+ 	* @param {string} search_text
+ 	*/
+ 	
+ 	searchText(search_text) {
+ 		
+ 		let foundText;
+ 		
+ 		if(search_text.length !== 0){
+ 					
+ 			for(i = 0; i < this.notes.length; i++) {
+ 				
+ 				if(search_text === this.notes[i]){
+ 					
+ 					foundText += " "+this.notes[i];
+ 					
+ 				}
+ 			}
+ 		}
+ 	}
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
  	
  }
