@@ -3,8 +3,13 @@
 *This program is a simple NoteApplication archive
 */
 
+<<<<<<< HEAD
 class NotesApplication {
 	
+=======
+ class NotesApplication {
+ 	
+>>>>>>> origin
  	/**
  	*@param {String} author
  	* @param {String} notes
@@ -14,8 +19,7 @@ class NotesApplication {
  		this.notes = [];
  		this.index = 0;
  	}
- 	
- 	
+
  	/**
  	* This function takes the note content
  	* as the parameter
@@ -26,7 +30,6 @@ class NotesApplication {
  		
  		this.notes.push(note_content.toString());
  	}
- 	
  	
  	/**
  	*This function lists out each of the notes in the notes list 
@@ -40,8 +43,7 @@ class NotesApplication {
  			
  		} else {
  			return null;
- 		}
- 		
+ 		}	
  	}
  	
  	/**
@@ -79,6 +81,7 @@ class NotesApplication {
  				}
  			}
  		}
+<<<<<<< HEAD
  	}
  	
 	/**
@@ -104,3 +107,7 @@ class NotesApplication {
 	}
 
 }
+=======
+ 	}	
+ }
+>>>>>>> origin
