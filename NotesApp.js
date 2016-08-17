@@ -3,8 +3,8 @@
 *This program is a simple NoteApplication archive
 */
 
- class NotesApplication {
- 	
+class NotesApplication {
+	
  	/**
  	*@param {String} author
  	* @param {String} notes
@@ -14,7 +14,8 @@
  		this.notes = [];
  		this.index = 0;
  	}
-
+ 	
+ 	
  	/**
  	* This function takes the note content
  	* as the parameter
@@ -25,6 +26,7 @@
  		
  		this.notes.push(note_content.toString());
  	}
+ 	
  	
  	/**
  	*This function lists out each of the notes in the notes list 
@@ -38,7 +40,8 @@
  			
  		} else {
  			return null;
- 		}	
+ 		}
+ 		
  	}
  	
  	/**
@@ -76,5 +79,28 @@
  				}
  			}
  		}
- 	}	
- }
+ 	}
+ 	
+	/**
+	*This function deletes the note at the index note_id of the notes list
+	*@param {Integer} note_id
+	*/
+	deleteNote(note_id) {
+
+		if(this.notes[note_id]!== undefined) {
+			delete this.notes[note_id];
+		}
+	}
+	/**
+	*This function replaces the content in the note at note_id with new_content
+	*@param note_id
+	*@param new_content
+	*/
+	edit(note_id, new_content) {
+		
+		if(this.notes[note_id]!== undefined) {
+			this.notes[note_id] = new_content.toString();
+		}
+	}
+
+}
