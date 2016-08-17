@@ -58,20 +58,28 @@ class NotesApplication {
  	*/
  	
  	searchText(search_text) {
- 		
- 		let foundText;
 
- 		if(search_text.length !== 0){
- 					
- 			for(i = 0; i < this.notes.length; i++) {
- 				
- 				if(search_text === this.notes[i]){
- 					
- 					foundText += ", "+this.notes[i];
- 					
- 				}
- 			}
+		notes = ['ghfh'];
+ 		if(this.notes.length === undefined) { 
+ 			return ("Notes not available");
+ 		}else if( search_text.toString().length ===  0) {
+ 			return ("Search test not available");
  		}
+		
+		
+ 		index = search_text.toString();
+ 		
+	 	if(index.toString() !== 0) {	
+		 	for(i = 0; i < this.notes.length; i++) {
+		 		if(this.notes[i].indexOf(index) !== -1){
+		 			console.log("Note ID: "+i+"\n"+this.notes[i].indexOf(index)+"\n"+"By Author "+this.author);
+		 		}
+		 		else {
+		 			return ("Text not found");
+		 		}
+		 	}
+		 	
+	 	}
  	}
  	
 	/**
