@@ -12,7 +12,6 @@ class NotesApplication {
  	constructor(author) {
  		this.author = author;
  		this.notes = [];
- 		this.index = 0;
  	}
  	
  	
@@ -33,15 +32,9 @@ class NotesApplication {
  	*/
  	listNotes() {
  		
- 		if(this.notes.length !== 0) {
- 			if(get(note_id)) {	
- 				console.log("Notes " + get(note_id) + " by" + " Author "+this.author);
- 			}
- 			
- 		} else {
- 			return null;
- 		}
- 		
+ 		for (var i = 0; i < notes.length; i++) {
+ 			console.log("Notes Id: " +i+"\n"+ notes[i] + "\n By" + " Author "+this.author);		 			
+ 		}		
  	}
  	
  	/**
@@ -67,14 +60,14 @@ class NotesApplication {
  	searchText(search_text) {
  		
  		let foundText;
- 		
+
  		if(search_text.length !== 0){
  					
  			for(i = 0; i < this.notes.length; i++) {
  				
  				if(search_text === this.notes[i]){
  					
- 					foundText += " "+this.notes[i];
+ 					foundText += ", "+this.notes[i];
  					
  				}
  			}
