@@ -14,6 +14,7 @@
  	constructor(author) {
  		this.author = author;
  		this.notes = [];
+ 		this.index = 0;
  	}
  	
  	
@@ -21,12 +22,11 @@
  	* This function takes the note content
  	* as the parameter
  	* and adds it to the notes list of the object.
- 	* @param note_content
+ 	* @param {String} note_content
  	*/
  	create(note_content) {
  		
- 		this.author = note_content;
- 		
+ 		this.notes.push(note_content.toString());
  	}
  	
  	
@@ -49,12 +49,12 @@
  	/**
  	* This function takes a note_id which refers to the index of the note in the notes list
  	* and returns the content of that note as a string.
- 	* @param note_id
+ 	* @param {Integer} note_id
  	*/
  	
  	getNote(note_id) {
  		
- 		if(indexOf(note_id === -1)){
+ 		if(indexOf(note_id) !== -1){
  			return this.notes[note_id];
  		}
  		
@@ -83,7 +83,11 @@
  		}
  	}
  	
- 	
+ 	deleteNote(){
+ 		
+ 		
+ 		
+ 	}
  	
  	
  	
