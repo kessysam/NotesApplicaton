@@ -5,8 +5,6 @@
 
  class NotesApplication {
  	
- 	
- 	
  	/**
  	*@param {String} author
  	* @param {String} notes
@@ -16,8 +14,7 @@
  		this.notes = [];
  		this.index = 0;
  	}
- 	
- 	
+
  	/**
  	* This function takes the note content
  	* as the parameter
@@ -28,7 +25,6 @@
  		
  		this.notes.push(note_content.toString());
  	}
- 	
  	
  	/**
  	*This function lists out each of the notes in the notes list 
@@ -42,8 +38,7 @@
  			
  		} else {
  			return null;
- 		}
- 		
+ 		}	
  	}
  	
  	/**
@@ -81,19 +76,5 @@
  				}
  			}
  		}
- 	}
- 	
- 	deleteNote(){
- 		
- 		
- 		
- 	}
- 	
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+ 	}	
  }
